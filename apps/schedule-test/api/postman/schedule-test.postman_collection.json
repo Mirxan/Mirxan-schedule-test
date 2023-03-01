@@ -1,0 +1,497 @@
+{
+	"info": {
+		"_postman_id": "94d10a94-f3f3-43ac-a6a1-22d6d1d174f5",
+		"name": "schedule-test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5736789"
+	},
+	"item": [
+		{
+			"name": "group",
+			"item": [
+				{
+					"name": "index",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{schedule_url}}/schedule/group",
+							"host": [
+								"{{schedule_url}}"
+							],
+							"path": [
+								"schedule",
+								"group"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "show",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{schedule_url}}/schedule/group/1",
+							"host": [
+								"{{schedule_url}}"
+							],
+							"path": [
+								"schedule",
+								"group",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "store",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{schedule_url}}/schedule/group?name=Group 2",
+							"host": [
+								"{{schedule_url}}"
+							],
+							"path": [
+								"schedule",
+								"group"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Group 2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{schedule_url}}/schedule/group/1?name=Group 1",
+							"host": [
+								"{{schedule_url}}"
+							],
+							"path": [
+								"schedule",
+								"group",
+								"1"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Group 1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "teacher",
+			"item": [
+				{
+					"name": "index",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{schedule_url}}/schedule/teacher",
+							"host": [
+								"{{schedule_url}}"
+							],
+							"path": [
+								"schedule",
+								"teacher"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "show",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{schedule_url}}/schedule/teacher/1",
+							"host": [
+								"{{schedule_url}}"
+							],
+							"path": [
+								"schedule",
+								"teacher",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "store",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{schedule_url}}/schedule/teacher?name=Alex&surname=Jonh&middlename=Richard&age=&birthday=1990-01-01&experience_year=&extra_info=",
+							"host": [
+								"{{schedule_url}}"
+							],
+							"path": [
+								"schedule",
+								"teacher"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Alex"
+								},
+								{
+									"key": "surname",
+									"value": "Jonh"
+								},
+								{
+									"key": "middlename",
+									"value": "Richard"
+								},
+								{
+									"key": "age",
+									"value": ""
+								},
+								{
+									"key": "birthday",
+									"value": "1990-01-01"
+								},
+								{
+									"key": "experience_year",
+									"value": ""
+								},
+								{
+									"key": "extra_info",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{schedule_url}}/schedule/teacher/1?name=Group 1",
+							"host": [
+								"{{schedule_url}}"
+							],
+							"path": [
+								"schedule",
+								"teacher",
+								"1"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Group 1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "schedule",
+			"item": [
+				{
+					"name": "index",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{schedule_url}}/schedule/schedule?teacher_id=1&group_id=1&room_id=2&date=2023-01-01&start_time=10:11&end_time=10:21",
+							"host": [
+								"{{schedule_url}}"
+							],
+							"path": [
+								"schedule",
+								"schedule"
+							],
+							"query": [
+								{
+									"key": "teacher_id",
+									"value": "1"
+								},
+								{
+									"key": "group_id",
+									"value": "1"
+								},
+								{
+									"key": "room_id",
+									"value": "2"
+								},
+								{
+									"key": "date",
+									"value": "2023-01-01"
+								},
+								{
+									"key": "start_time",
+									"value": "10:11"
+								},
+								{
+									"key": "end_time",
+									"value": "10:21"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "list",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{schedule_url}}/schedule/schedule/list",
+							"host": [
+								"{{schedule_url}}"
+							],
+							"path": [
+								"schedule",
+								"schedule",
+								"list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "show",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{schedule_url}}/schedule/schedule/5",
+							"host": [
+								"{{schedule_url}}"
+							],
+							"path": [
+								"schedule",
+								"schedule",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "store",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{schedule_url}}/schedule/schedule?teacher_id=1&group_id=1&room_id=2&date=2023-01-01&start_time=10:11&end_time=10:15",
+							"host": [
+								"{{schedule_url}}"
+							],
+							"path": [
+								"schedule",
+								"schedule"
+							],
+							"query": [
+								{
+									"key": "teacher_id",
+									"value": "1"
+								},
+								{
+									"key": "group_id",
+									"value": "1"
+								},
+								{
+									"key": "room_id",
+									"value": "2"
+								},
+								{
+									"key": "date",
+									"value": "2023-01-01"
+								},
+								{
+									"key": "start_time",
+									"value": "10:11"
+								},
+								{
+									"key": "end_time",
+									"value": "10:15"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{schedule_url}}/schedule/schedule/5?teached_id=1&group_id=1&room_id=2&date=2023-01-01&start_time=10:12&end_time=10:16",
+							"host": [
+								"{{schedule_url}}"
+							],
+							"path": [
+								"schedule",
+								"schedule",
+								"5"
+							],
+							"query": [
+								{
+									"key": "teached_id",
+									"value": "1"
+								},
+								{
+									"key": "group_id",
+									"value": "1"
+								},
+								{
+									"key": "room_id",
+									"value": "2"
+								},
+								{
+									"key": "date",
+									"value": "2023-01-01"
+								},
+								{
+									"key": "start_time",
+									"value": "10:12"
+								},
+								{
+									"key": "end_time",
+									"value": "10:16"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "room",
+			"item": [
+				{
+					"name": "index",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{schedule_url}}/schedule/room",
+							"host": [
+								"{{schedule_url}}"
+							],
+							"path": [
+								"schedule",
+								"room"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "show",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{schedule_url}}/schedule/room/1",
+							"host": [
+								"{{schedule_url}}"
+							],
+							"path": [
+								"schedule",
+								"room",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "store",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{schedule_url}}/schedule/room?name=English room123&number=12",
+							"host": [
+								"{{schedule_url}}"
+							],
+							"path": [
+								"schedule",
+								"room"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "English room123"
+								},
+								{
+									"key": "number",
+									"value": "12"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{schedule_url}}/schedule/room/1?name=English room1&number=123",
+							"host": [
+								"{{schedule_url}}"
+							],
+							"path": [
+								"schedule",
+								"room",
+								"1"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "English room1"
+								},
+								{
+									"key": "number",
+									"value": "123"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "schedule_url",
+			"value": "http://schedule-test.test/api"
+		}
+	]
+}
