@@ -33,7 +33,8 @@ class ScheduleRepository implements ScheduleRepositoryInterface
                 isset($request['start_time']) && isset($request['end_time']) &&
                 !empty($request['start_time']) && !empty($request['end_time']
             ),function($query)use($request){
-                $query->whereBetween('start_time',[$request['start_time'],$request['end_time']]);
+                $query->where('start_time','>=',$request['start_time'])
+                    ->where('end_time','<=',$request['end_time']);
             })
             ->get();
     }
